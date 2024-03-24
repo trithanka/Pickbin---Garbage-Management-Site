@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fillup Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Public+Sans:wght@300&display=swap" rel="stylesheet">
+    style
+      include ../static/Fillup2style.css
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    //- <style>
+    //-     #map {
+    //-         height: 512px;
+    //-         margin: 50px 0 0 0;
+    //-         width: 30%;
+    //-         border-radius: 2%;
+    //-         box-shadow:8px 2px 20px 4px rgba(0, 0, 0, 0.178);
+    //-     }
+    //- </style>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <nav id="navArea">
+        <div class="logo">
+            <a href="#">
+                <img src="static/Logo2.png" alt="your company logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/help">FAQs</a><li>
+            <li><a href="/contactus">Contact Us</a></li>
+            <li><a href="/aboutus">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="id01">
+        <h1 class="h1">Fill up the details below</h1>
+    </div>
+    <div class="main">
+        <div id="id02">
+            <form class="buttons" action='/complaint' method="post">
+                e Name :
+                <input type="text" name="name" id="name" class="name" placeholder="Your name" required><br>
+                
+                e Email :
+                <input type="email" name="email" id="email" class="email" placeholder="Email" required><br>
+
+                e Location :
+                <select class="Location" name='location' id='location' val>
+                    <option value="None">None</option>
+                    <option value="Narangi">Narangi</option>
+                    <option value="Panikheiti">Panikheiti</option>
+                    <option value="Sathgaon">Sathgaon</option>
+                    <option value="Chandmari">Chandmari</option>
+                </select>
+
+                <input type="number" name="houseno" class="houseno" id="location" required placeholder="House Number"><br>
+                <input type="text" name="address" class="address" id="location" placeholder="Colony name or any"><br>
+
+                e Waste Type :
+                <select class="Type" name='type' id='type'>
+                    <option value="None">None</option>
+                    <option value="Wet">Wet Waste</option>
+                    <option value="Dry">Dry Waste</option>
+                    <option value="Metal">Metal waste</option>
+                    <option value="Glass">Glass Waste</option>
+                    <option value="Paper">Paper Waste</option>
+                </select><br>
+
+                e Waste Quantity :
+                <select class="quantity" name='quantity' id='quantity'>
+                     <option value="None">None</option>
+                     <option value="Less than 5 kgs">Less than 5 kgs</option>
+                     <option value="More than 5 kgs">More than 5 kgs</option>
+                     <option value="More than 10 kgs">More than 10 kgs</option>
+                     <option value="More than 20 kgs">More than 20 kgs</option>
+                </select><br>
+
+                //- <input type="text" class="quantity" id="quantity" placeholder="weight in Kgs" required><br>
+
+                <input type="submit" value="Confirm" class="submit" id='submit'>
+                <input type="reset" value="Clear" class="reset">
+
+            </form>
+        </div>
+
+
+
+    <div id="map"></div>
+    </div>
+    script.
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([51.5, -0.09]).addTo(map);
+
+        function onLocationFound(e) {
+            var radius = e.accuracy / 2;
+
+            L.marker(e.latlng).addTo(map)
+                .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+            L.circle(e.latlng, radius).addTo(map);
+        }
+
+        function onLocationError(e) {
+            alert(e.message);
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+        map.locate({ setView: true, maxZoom: 16 });
+    
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+    <footer>Make your place clean and green</footer>
+
+</body>
+
+</html>

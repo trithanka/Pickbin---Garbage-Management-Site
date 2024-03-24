@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+body {
+    font-family: lato;
+    }
+    
+#navArea {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: rgb(235, 222, 45);
+    transition: background 0.5s;
+    }
+    
+#navArea .logo img {
+    height: 90px;
+    transition: height 0.5s;
+    }
+    
+#navArea ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 150%;
+    }
+    
+#navArea ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.5s;
+    }
+    
+#navArea.is-sticky {
+    background: #000;
+    }
+    
+#navArea.is-sticky a {
+    color:#fff;
+    }
+    
+#navArea.is-sticky .logo img {
+    height:64px;
+    } 
+
+
+h1{
+    text-align: center;
+    margin: 8% 0% 1% 0%;
+    font-size: 200%;
+    font-family: 'Public Sans', sans-serif;
+}
+
+p{
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    margin-bottom: 3%;
+}
+
+#id02{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+.f1{
+    background-color: rgba(137, 43, 226, 0.541);
+    padding: 3px 50px 40px 50px ;
+    margin: 2% 8% 3.65% 8%;
+    font-size: 130%;
+    border-radius: 20px;
+    box-shadow:10px 10px 15px 4px rgba(0, 0, 0, 0.336);
+    
+}
+
+#name{
+    margin: 40px 0px 10px 0px;
+    /* padding: 2px 4px 2px 4px; */
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 10px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+/* #name:hover{
+    margin: 40px 0px 10px 0px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 100px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+} */
+
+#phone_no{
+    margin: 3px 0px 10px 0px;
+    /* padding: 2px 4px 2px 4px; */
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 10px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+/* #number:hover{
+    margin: 3px 0px 10px 0px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 100px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+} */
+
+#email{
+    margin: 3px 0px 10px 0px;
+    /* padding: 2px 4px 2px 4px; */
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 10px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+/* #email:hover{
+    margin: 3px 0px 10px 0px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 100px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+} */
+
+#password{
+    margin: 3px 0px 10px 0px;
+    /* padding: 2px 4px 2px 4px; */
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 10px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+/* #password:hover{
+    margin: 3px 0px 10px 0px;
+    font-size: 150%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 100px;
+    padding:10px;
+    border:0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+} */
+
+#submit{
+    text-align: center;
+    margin: 10px 5px 0px 0px;
+    padding: 2px 10px 2px 10px;
+    font-size:100%;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 5px;
+    border: 0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+#reset{
+    text-align: center;
+    margin: 10px 0px 0px 5px;
+    padding: 2px 10px 2px 10px;
+    font-size:100%;
+    font-family: 'Public Sans', sans-serif;
+    border-radius: 5px;
+    border: 0;
+    box-shadow:10px 0 15px 4px rgba(0, 0, 0, 0.336);
+}
+
+footer{
+    margin: 4% 0% 0% 0%;
+    font-family: 'Public Sans', sans-serif;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+}
+

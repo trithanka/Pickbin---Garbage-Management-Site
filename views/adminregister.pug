@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Public+Sans:wght@300&display=swap" rel="stylesheet">
+    style 
+        include ../static/adminregisterstyle.css
+</head>
+<body>
+    
+    <nav id="navArea">
+        <div class="logo">
+          <a href="#">
+            <img src="static/Logo2.png" alt="your company logo">
+          </a>
+        </div>
+        <ul>
+          <h1>Admin</h1>
+    </nav> 
+
+        <h1>Hey User!</h1>
+        <p>Don't worry, you can be part of us to help collection by registering here.</p>
+
+    <div id="id02">
+        <form class="f1" action="/adminreg" method="post" >
+            <input type="text" name="name" id="name" required placeholder="Enter your name"><br>
+            <input type="text" name="phone_no" id="phone_no" placeholder="Enter your phone number" required><br>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+            //- <input type="submit" id="submit" value="Register">
+            <button class="btn" id="submit" type="submit">Submit</button>
+            <input type="reset" id="reset">
+        </form>
+    </div>
+
+    <footer>
+        <b><a href="/loginadmin">Click Here</a> to go login page.</b>
+    </footer>
+   
+</body>
+</html>

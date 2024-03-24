@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title Payment Form
+    // Load the Stripe.js library
+    script(src='https://js.stripe.com/v3/')
+  body
+    // Display an error message if there is one
+    if errorMessage
+      p.error-message= errorMessage
+    // Display the payment form
+    form(action='/charge', method='post')
+      .form-row
+        label(for='card-element') Credit or debit card
+      .form-row
+        // Create the Stripe card element
+        #card-element
+      .form-row
+        // Add a submit button
+        button.btn(type='submit') Pay $9.99

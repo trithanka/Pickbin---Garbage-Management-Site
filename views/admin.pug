@@ -1,0 +1,144 @@
+doctype html
+html
+  head
+    title Admin Page
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js')
+
+  <nav id="navArea">
+    <div class="logo">
+      <a href="#">
+        <img src="static/Logo2.png" alt="your company logo">
+      </a>
+    </div>
+    <ul>
+      <li><a href="/loginadmin">Logout</a></li>
+    </ul>
+  </nav>
+
+
+  body
+    h1 ADMIN DASHBOARD
+h3 
+  Total Total Registered Complain: #{details.length}
+canvas#myChart(width='400' height='100')
+script.
+  // Get the data from the local variable
+  var data = !{JSON.stringify(data)};
+
+  // Extract the labels (locations) and data (number of complaints) from the data array
+  var labels = data.map(function(d) { return d._id; });
+  var values = data.map(function(d) { return d.count; });
+
+  // Get the canvas element where the chart will be rendered
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: labels,
+    datasets: [{
+      label: 'Number of Complaints',
+      data: values,
+      backgroundColor: function(context) {
+        var index = context.dataIndex;
+        var value = context.dataset.data[index];
+        if (value > 3) {
+          return 'red';
+        } else {
+          return 'rgba(255, 99, 132, 0.2)';
+        }
+      },
+      borderColor: 'rgba(255, 99, 132, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+  });
+
+
+table
+  tr
+    th Name
+    th Email
+    th Location
+    th House No
+    th Address
+    th Type
+    th Quantity
+  each complaint in complaints
+    tr
+      td #{complaint.name}
+      td #{complaint.email}
+      td #{complaint.location}
+      td #{complaint.houseno}
+      td #{complaint.address}
+      td #{complaint.type}
+      td #{complaint.quantity}
+
+
+style.
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  }
+  table{
+    width: 57%;
+    margin-left: 21%;
+    margin-top: 4%;
+  }
+
+  #navArea {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: rgb(235, 222, 45);
+    transition: background 0.5s;
+    }
+    
+  #navArea .logo img {
+    height: 100px;
+    transition: height 0.5s;
+    }
+      
+  #navArea ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 150%;
+    }
+      
+  #navArea ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.5s;
+    }
+      
+  #navArea.is-sticky {
+    background: #000;
+    }
+      
+  #navArea.is-sticky a {
+    color:#fff;
+    }
+      
+  #navArea.is-sticky .logo img {
+    height:64px;
+    } 
+
+  h1{
+    margin-top:7%
+  }

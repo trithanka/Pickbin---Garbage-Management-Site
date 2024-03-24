@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Public+Sans:wght@300&display=swap" rel="stylesheet">
+     style
+          include ../static/adminloginstyle.css 
+</head>    
+<body>
+    //- <h1 class="confirm">
+    //-     |  #{confirm}
+    //- </h1>
+    <nav id="navArea">
+        <div class="logo">
+          <a href="#">
+            <img src="static/Logo2.png" alt="your company logo">
+          </a>
+        </div>
+        <ul>
+          <h1>Admin Page</h1>
+        </ul>
+    </nav>
+
+    <h1>Log in here</h1>
+    
+    <div id="id01">
+        <form action="/adminlog" class="box" method="POST">
+            <input type="email" name="email" id="email" placeholder="Enter your email"  required><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password"  required><br>
+            //- <input type="btn" id="submit" value="Log In" a(href="/admin")>
+            <b id="submit"><a href="/admin"> Login</a></b>
+            <input id="reset" type="reset">
+        </form>
+    </div>
+
+    <footer>
+         <b>If you haven't register yet, then<a href="/registeradmin"> click here</a></b>
+    </footer>
+</body>
+</html>

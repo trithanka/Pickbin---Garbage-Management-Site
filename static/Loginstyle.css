@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+body {
+    font-family: lato;
+    }
+    
+#navArea {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: rgb(235, 222, 45);
+    transition: background 0.5s;
+    }
+    
+#navArea .logo img {
+    height: 100px;
+    transition: height 0.5s;
+    }
+    
+#navArea ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 150%;
+    }
+    
+#navArea ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: color 0.5s;
+    }
+    
+#navArea.is-sticky {
+    background: #000;
+    }
+    
+#navArea.is-sticky a {
+    color:#fff;
+    }
+    
+#navArea.is-sticky .logo img {
+    height:64px;
+    } 
+
+h1{
+    margin: 10% 0% 0% 0%;
+    text-align: center;
+    font-family: 'Public Sans', sans-serif;
+  }
+.box{
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.404);
+    margin-top: 5%;
+    margin-right: 35%;
+    margin-bottom: 10%;
+    margin-left: 35%;
+    font-size: 130%;
+    border-radius: 20px;
+    box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.164); 
+}
+
+#email{
+    text-align: center;
+    margin: 17% 20% 3% 20%;
+    padding: 5px 10px 5px 10px;
+    font-size: 130%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.164);   
+}
+
+#password{ 
+    text-align: center;
+    margin: 1% 20% 7% 20%;
+    padding: 5px 10px 5px 10px;
+    font-size: 130%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.164);
+} 
+
+
+#submit{
+    text-align: center;
+    margin: 0px 10px 60px 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 90%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.164);
+}
+
+#reset{ 
+    text-align: center;
+    margin: 0px 10px 60px 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: 90%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow:0 0 15px 4px rgba(0, 0, 0, 0.164);
+}
+
+footer{
+    margin: 10% 0% 0% 0%;
+    font-family: 'Public Sans', sans-serif;
+    text-align: center;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+
